@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static com.zenlabs.zenstories.ZenConstants.ARGS_DATA;
+
 public class HomeFragment extends Fragment {
 
     TextView listBtn;
@@ -30,14 +32,8 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 StoryFragment storyFragment = new StoryFragment();
                 Bundle args = new Bundle();
-                StoryData storyData = new StoryData();
-                storyData.setStory("story story story story story \n\n\n\n\n\n\n\n\n " +
-                        "story story story story story \n\n\n\n\n\n\n\n\n" +
-                        "story story story story story \n\n\n\n\n\n\n\n\n" +
-                        "story story story story story \n\n\n\n\n\n\n\n\n" +
-                        "story story story story story \n\n\n\n\n\n\n\n\n");
-                storyData.setTitle("Title");
-                args.putSerializable("STORY", storyData);
+                StoryData storyData = new StoryData("title", "id", "story");
+                args.putSerializable(ARGS_DATA, storyData);
                 storyFragment.setArguments(args);
                 ((MainActivity) getActivity()).addFragment(storyFragment);
             }
