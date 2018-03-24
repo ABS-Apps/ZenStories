@@ -45,7 +45,7 @@ public class StoryListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.story_fragment, container, false);
+        View view = inflater.inflate(R.layout.story_list_fragment, container, false);
         recyclerView = view.findViewById(R.id.recycler_view);
         parseData();
         setupRecyclerView();

@@ -45,6 +45,12 @@ public class HomeFragment extends Fragment {
                 ((MainActivity) getActivity()).addFragment(aboutFragment);
             }
         });
+        listBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity) getActivity()).addFragment(new StoryListFragment());
+            }
+        });
 
     }
 
