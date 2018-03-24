@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 StoryFragment storyFragment = new StoryFragment();
                 Bundle args = new Bundle();
-                StoryData storyData = new StoryData("title", "id", "story");
+                StoryData storyData = new StoryData("title", 1, "story");
                 args.putSerializable(ARGS_DATA, storyData);
                 storyFragment.setArguments(args);
                 ((MainActivity) getActivity()).addFragment(storyFragment);

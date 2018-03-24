@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class StoryData implements Serializable {
     private String title;
-    private String id;
+    private int id;
     private String story;
 
-    public StoryData(String title, String id, String story) {
+    public StoryData(String title, int id, String story) {
         this.title = title;
         this.id = id;
         this.story = story;
@@ -21,11 +21,11 @@ public class StoryData implements Serializable {
         this.title = title;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

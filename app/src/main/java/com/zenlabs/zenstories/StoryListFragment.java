@@ -10,7 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
+
+import static com.zenlabs.zenstories.ZenConstants.ARGS_DATA;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,7 +57,10 @@ public class StoryListFragment extends Fragment {
     }
 
     private void parseData() {
-
+        Gson gson = new Gson();
+        JsonConvertor jsonConverter = new JsonConvertor("jsonstories.json", getActivity());
+        ZenStories zenStories = gson.fromJson(String.valueOf(jsonConverter.getJsonObject()), ZenStories.class);
+        storyListData = zenStories.getData();
     }
 
     private void setupRecyclerView() {
@@ -66,7 +73,7 @@ public class StoryListFragment extends Fragment {
             public void onClick(View view) {
                 int clickedPosition = (int) view.getTag();
                 switch (view.getId()) {
-                    case R.id.title_text:
+                    case R.id.story_title_text:
                         goToStoryFragment(clickedPosition);
                         break;
                     default:
@@ -80,7 +87,7 @@ public class StoryListFragment extends Fragment {
     private void goToStoryFragment(int clickedPosition) {
         StoryFragment fragment = new StoryFragment();
         Bundle args = new Bundle();
-        args.putSerializable("STORY", storyListData.get(clickedPosition));
+        args.putSerializable(ARGS_DATA, storyListData.get(clickedPosition));
         fragment.setArguments(args);
         ((MainActivity) getActivity()).addFragment(fragment);
     }
