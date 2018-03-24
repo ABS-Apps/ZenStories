@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment, container, false);
         listBtn = view.findViewById(R.id.list_button);
         ranBtn = view.findViewById(R.id.random_button);
-        listBtn = view.findViewById(R.id.about_button);
+        aboutBtn = view.findViewById(R.id.about_button);
         setupViews();
         return view;
     }
@@ -42,6 +42,14 @@ public class HomeFragment extends Fragment {
                 ((MainActivity) getActivity()).addFragment(storyFragment);
             }
         });
+        aboutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AboutFragment aboutFragment = new AboutFragment();
+                ((MainActivity) getActivity()).addFragment(aboutFragment);
+            }
+        });
+
     }
 
 }
