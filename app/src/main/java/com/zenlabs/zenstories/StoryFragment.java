@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static com.zenlabs.zenstories.ZenConstants.ARGS_DATA;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link StoryFragment#newInstance} factory method to
@@ -27,7 +29,7 @@ public class StoryFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            storyData = (StoryData) getArguments().getSerializable("STORY");
+            storyData = (StoryData) getArguments().getSerializable(ARGS_DATA);
         }
     }
 

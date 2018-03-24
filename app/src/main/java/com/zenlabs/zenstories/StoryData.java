@@ -3,9 +3,15 @@ package com.zenlabs.zenstories;
 import java.io.Serializable;
 
 public class StoryData implements Serializable {
-    String title;
-    String id;
-    String story;
+    private String title;
+    private String id;
+    private String story;
+
+    public StoryData(String title, String id, String story) {
+        this.title = title;
+        this.id = id;
+        this.story = story;
+    }
 
     public String getTitle() {
         return title;
