@@ -9,21 +9,21 @@
     <Button
         android:id="@+id/list_button"
         style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/stories" />
 
     <Button
         android:id="@+id/random_button"
         style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/random_story" />
 
     <Button
         android:id="@+id/about_button"
         style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/about" />
 

@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         HomeFragment homeFragment = new HomeFragment();
-        fragmentTransaction.add(R.id.frame_layout, homeFragment).commit();
+        fragmentTransaction.replace(R.id.frame_layout, homeFragment).commit();
+        for (int i = 0; i < fragmentManager.getBackStackEntryCount(); i++) {
+            fragmentManager.popBackStack();
+        }
     }
 
     public void addFragment(Fragment fragment) {
@@ -32,6 +35,5 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
     }
 }

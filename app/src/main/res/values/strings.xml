@@ -1,14 +1,10 @@
 <resources>
-    <string name="app_name">ZenStories</string>
-    <string name="sample_1">sample 1</string>
+    <string name="app_name">Zen Stories</string>
     <string name="stories">STORIES</string>
     <string name="random_story">RANDOM STORY</string>
-    <string name="about">ABOUT</string>
+    <string name="about">ABOUT US</string>
     <string name="about_text">Zen Stories app is developed by ABS Software Solutions.\n\n
         If you are facing any issues with the app, please report using the link below.\n\n
         Most of the stories are taken from public domain. We have also attributes stories to the source whenever possible. If you have any issues with the content, please report here.</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="site_link">Click here to report</string>
 </resources>
