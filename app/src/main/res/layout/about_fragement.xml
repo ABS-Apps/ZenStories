@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:background="@android:color/white"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -11,19 +11,28 @@
         android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about"
-        android:textSize="20sp"
         android:paddingBottom="10dp"
-        />
+        android:text="@string/about"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/about_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_text"/>
+        android:text="@string/about_text"
+        android:textColor="@android:color/black"
+        android:layout_margin="20dp"
+        android:textSize="18sp" />
+
     <TextView
         android:id="@+id/link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="@string/site_link"
-        android:textColor="@android:color/holo_blue_dark"/>
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp" />
 </LinearLayout>
